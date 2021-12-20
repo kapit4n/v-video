@@ -14,27 +14,37 @@
  * http://stylus-lang.com/
  */
 
+$grey-1 = #343a40;
+$header-background = #3e403f;
+$left-side-backrground = #111212;
+
+.bg-dark {
+  background: $header-background !important;
+}
+
 .header-menu-left-nav {
   z-index: 5;
   top: 50px;
   left: 0;
   position: absolute;
   width: 15rem;
-  background: #343a40;
+  background: $left-side-backrground;
   flex-direction: column;
 }
 
 @media (min-width: 700px) {
   .header-menu-left-nav {
-    background-color: #343a40;
-    color: black;
+    background: $left-side-backrground;
+    color: white;
+  }
+  .header-menu-left-nav a {
+    color: white; 
   }
   .navbar-dark .navbar-nav .active > .nav-link {
-    color: black;
+    color: white;
   }
   .navbar-nav :hover {
-    opacity: 0.8;
-    background-color: rgb(180, 180, 180);
+    background: #303333;
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: column;
@@ -44,7 +54,7 @@
 
 @media (min-width: 992px) {
   .navbar-expand-lg {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
 }
@@ -74,6 +84,20 @@
   width: 100%;
 }
 
+
+  .navbar-nav {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .navbar-nav li {
+    padding-left: 1rem;
+  }
+
+  .navbar-nav span {
+    padding: 1rem;
+  }
+
 @media (min-width: 992px) {
   .left-container {
     display: block;
@@ -81,10 +105,6 @@
     max-width: 20rem;
   }
 
-  .navbar-nav {
-    padding-left: 1rem;
-    margin-bottom: 0;
-  }
 
   .center-container {
     width: 90%;

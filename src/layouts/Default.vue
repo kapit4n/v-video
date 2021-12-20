@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  :style="{width: '100%'}">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <button
         class="navbar-toggler"
@@ -14,19 +14,24 @@
       >
         V-Video
       </router-link>
-      <div>
-        <input placeholder="Search"/>
+      <div :style="{display: 'flex', width: '40%'}">
+          <input placeholder="Search" :style="{width: '100%', 'max-width': '30rem'}" />
+          <button><i class="fa fa-microphone"></i></button>
       </div>
-      <button><i class="fa fa-microphone"></i></button>
-      <button><i class="fa fa-plus"></i></button>
-      <button><i class="fa fa-list"></i></button>
-      <button><i class="fa fa-flag"></i></button>
-      <button><i class="fa fa-user"></i></button>
+      <div :style="{display: 'flex'}">
+        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-plus"></i></button>
+        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-list"></i></button>
+        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-flag"></i></button>
+        <button :style="{margin: '0 0 0 0.5rem'}"><i class="fa fa-user"></i></button>
+      </div>
       <div
         :class="{ show : menuCollapsed}"
         class="collapse navbar-collapse header-menu-left-nav"
       >
         <ul class="navbar-nav mr-auto">
+          <span>
+            SETTINGS
+          </span>
           <router-link
             :to="{ name: 'home.index' }"
             active-class="active"

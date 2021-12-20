@@ -6,6 +6,9 @@
         class="header-menu-left-nav"
       >
         <ul class="navbar-nav mr-auto">
+          <span>
+            SETTINGS
+          </span>
           <router-link
             :to="{ name: 'home.index' }"
             active-class="active"
