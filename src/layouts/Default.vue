@@ -24,9 +24,7 @@
       <button><i class="fa fa-user"></i></button>
       <div
         :class="{ show : menuCollapsed}"
-        class="collapse navbar-collapse "
-        :style="{zIndex: 5, top: '50px', left: '0', position: 'absolute',
-        width: '100px', background: 'black'}"
+        class="collapse navbar-collapse header-menu-left-nav"
       >
         <ul class="navbar-nav mr-auto">
           <router-link
@@ -72,7 +70,7 @@
       </div>
     </nav>
 
-    <div class="container pt-4">
+    <div class="">
       <div class="row">
         <div class="col col-12">
           <!-- Content will be placed here -->
