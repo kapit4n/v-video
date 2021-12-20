@@ -1,13 +1,6 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <router-link
-        :to="{ name: 'home.index' }"
-        class="navbar-brand"
-      >
-        Vue 2 Boilerplate
-      </router-link>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -15,10 +8,25 @@
       >
         <span class="navbar-toggler-icon" />
       </button>
-
+      <router-link
+        :to="{ name: 'home.index' }"
+        class="navbar-brand"
+      >
+        V-Video
+      </router-link>
+      <div>
+        <input placeholder="Search"/>
+      </div>
+      <button><i class="fa fa-microphone"></i></button>
+      <button><i class="fa fa-plus"></i></button>
+      <button><i class="fa fa-list"></i></button>
+      <button><i class="fa fa-flag"></i></button>
+      <button><i class="fa fa-user"></i></button>
       <div
         :class="{ show : menuCollapsed}"
-        class="collapse navbar-collapse"
+        class="collapse navbar-collapse "
+        :style="{zIndex: 5, top: '50px', left: '0', position: 'absolute',
+        width: '100px', background: 'black'}"
       >
         <ul class="navbar-nav mr-auto">
           <router-link
@@ -32,13 +40,23 @@
             </a>
           </router-link>
           <router-link
-            :to="{ name: 'account.index' }"
+            :to="{ name: 'explore.index' }"
             active-class="active"
             class="nav-item"
             tag="li"
           >
             <a class="nav-link">
-              Account
+              Explore
+            </a>
+          </router-link>
+          <router-link
+            :to="{ name: 'subscriptions.index' }"
+            active-class="active"
+            class="nav-item"
+            tag="li"
+          >
+            <a class="nav-link">
+              Subscriptions
             </a>
           </router-link>
         </ul>
