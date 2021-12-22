@@ -24,33 +24,16 @@
 </template>
 
 <script>
-/* ============
- * Card Component
- * ============
- *
- * A basic card component.
- *
- * Gives an idea how components work.
- */
 
 import SlotMixin from '@/mixins/slot';
 
 export default {
-  /**
-   * The name of the component.
-   */
   name: 'Card',
 
-  /**
-   * The mixins that the component can use.
-   */
   mixins: [
     SlotMixin,
   ],
 
-  /**
-   * The properties that the component accepts.
-   */
   props: {
     contextualStyle: {
       default: 'primary',
@@ -59,16 +42,7 @@ export default {
     },
   },
 
-  /**
-   * The computed properties that the component can use.
-   */
   computed: {
-    /**
-     * Computed property which will compute the classes
-     * for the header of the card.
-     *
-     * @returns {Array} The classes for the header.
-     */
     classNamesHeader() {
       const classNames = ['card-header'];
 

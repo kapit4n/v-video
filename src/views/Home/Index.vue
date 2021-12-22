@@ -54,38 +54,9 @@
       <div class="center-container" :style="{background: 'black'}">
         <div :style="{display: 'flex', flexFlow: 'row wrap',
           justifyContent: 'flex-start'}">
-          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem',
-            background: 'transparent'}">
-            <div slot="body">
-              <video
-              :style="{width: '300px', height: '200px'}" controls>
-              <source src="/video/video-invencible.mp4" type="video/mp4">
-              </video>
-            </div>
-            <span slot="header">
-              INVENCIBLE
-            </span>
-            <div slot="footer">
-              Skillet 12M vies - 2years ago
-            </div>
-          </v-card>
-
-          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem',
-              background: 'transparent'}">
-            <div slot="body">
-              <video
-              :style="{width: '300px', height: '200px'}" controls>
-              <source src="/video-vue.mp4" type="video/mp4">
-              </video>
-            </div>
-            <span slot="header">
-              VUE
-            </span>
-            <div slot="footer">
-              Luis Arce 23M views, 20 days ago
-            </div>
-          </v-card>
-
+         <v-video url="/video/video-vue.mp4" title="Vue" details="Luis Arce"/>
+         <v-video url="/video/video-invencible.mp4" title="INVENCIBLE"
+          details="Skillet 12M vies - 2years ago"/>
         </div>
       </div>
     </div>
@@ -101,7 +72,7 @@
  */
 
 import VLayout from '@/layouts/Default.vue';
-import VCard from '@/components/Card.vue';
+import VVideo from '@/components/Video.vue';
 
 export default {
   /**
@@ -114,7 +85,7 @@ export default {
    */
   components: {
     VLayout,
-    VCard,
+    VVideo,
   },
 };
 </script>
