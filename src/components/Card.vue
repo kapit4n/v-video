@@ -9,12 +9,14 @@
      <h4
       v-if="hasSlot('header')"
       :class="classNamesHeader"
+      :style="{background: 'transparent !important'}"
     >
       <slot name="header" />
     </h4>
     <div
       v-if="hasSlot('footer')"
       class="card-footer"
+      :style="{background: 'transparent', color: '#d9dbde'}"
     >
       <slot name="footer" />
     </div>

@@ -54,7 +54,8 @@
       <div class="center-container" :style="{background: 'black'}">
         <div :style="{display: 'flex', flexFlow: 'row wrap',
           justifyContent: 'flex-start'}">
-          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem'}">
+          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem',
+            background: 'transparent'}">
             <div slot="body">
               <video
               :style="{width: '300px', height: '200px'}" controls>
@@ -62,14 +63,15 @@
               </video>
             </div>
             <span slot="header">
-              Video title
+              INVENCIBLE
             </span>
             <div slot="footer">
-              Video description goes here
+              Skillet 12M vies - 2years ago
             </div>
           </v-card>
 
-          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem'}">
+          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem',
+              background: 'transparent'}">
             <div slot="body">
               <video
               :style="{width: '300px', height: '200px'}" controls>
@@ -77,10 +79,10 @@
               </video>
             </div>
             <span slot="header">
-              Video title
+              VUE
             </span>
             <div slot="footer">
-              Video description goes here
+              Luis Arce 23M views, 20 days ago
             </div>
           </v-card>
 
