@@ -1,6 +1,5 @@
 <template>
   <div class="video">
-    Hello this is a card
     <v-card contextual-style="dark" :style="{height: 300, margin: '1rem',
         background: 'transparent'}">
       <div slot="body">
