@@ -51,81 +51,40 @@
         </span>
       </div>
       </div>
-      <div class="center-container">
-        center side bar
-        <v-card contextual-style="dark">
-          <span slot="header">
-            {{ $t('general.welcome') }}
-          </span>
-          <div slot="body">
-            <p>
-              Get started with the Vue 2 boilerplate
-            </p>
-            <p>
-              For questions, contact me:
-            </p>
-            <p>
-              <a
-                class="btn btn-outline-primary"
-                href="http://gitter.im/petervmeijgaard"
-                target="_blank"
-              >
-                <i
-                  class="fa fa-github fa-fw"
-                  aria-hidden="true"
-                />
-                <span class="pl-2">
-                  Gitter
-                </span>
-              </a>
-              <a
-                class="btn btn-outline-primary"
-                href="http://github.com/petervmeijgaard"
-                target="_blank"
-              >
-                <i
-                  class="fa fa-github fa-fw"
-                  aria-hidden="true"
-                />
-                <span class="pl-2">
-                  GitHub
-                </span>
-              </a>
-              <a
-                class="btn btn-outline-primary"
-                href="http://twitter.com/petervmeijgaard"
-                target="_blank"
-              >
-                <i
-                  class="fa fa-twitter fa-fw"
-                  aria-hidden="true"
-                />
-                <span class="pl-2">
-                  Twitter
-                </span>
-              </a>
-            </p>
-            <p>
-              For bugs, see:
-            </p>
-            <a
-              class="btn btn-outline-primary"
-              href="https://github.com/petervmeijgaard/vue-2.0-boilerplate/issues"
-              target="_blank"
-            >
-              <i
-                class="fa fa-github fa-fw"
-                aria-hidden="true"
-              />
-              <span class="pl-2">
-                GitHub
-              </span>
-            </a>
-          </div>
-          <div slot="footer">
-            Made with love by Vivid Web
-          </div>
-        </v-card>
+      <div class="center-container" :style="{background: 'black'}">
+        <div :style="{display: 'flex', flexFlow: 'row wrap',
+          justifyContent: 'flex-start'}">
+          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem'}">
+            <div slot="body">
+              <video
+              :style="{width: '300px', height: '200px'}" controls>
+              <source src="/video/video-invencible.mp4" type="video/mp4">
+              </video>
+            </div>
+            <span slot="header">
+              Video title
+            </span>
+            <div slot="footer">
+              Video description goes here
+            </div>
+          </v-card>
+
+          <v-card contextual-style="dark" :style="{height: 300, margin: '1rem'}">
+            <div slot="body">
+              <video
+              :style="{width: '300px', height: '200px'}" controls>
+              <source src="/video-vue.mp4" type="video/mp4">
+              </video>
+            </div>
+            <span slot="header">
+              Video title
+            </span>
+            <div slot="footer">
+              Video description goes here
+            </div>
+          </v-card>
+
+        </div>
       </div>
     </div>
   </v-layout>

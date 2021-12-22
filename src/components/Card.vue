@@ -1,17 +1,17 @@
 <template>
   <div class="card">
-    <h4
-      v-if="hasSlot('header')"
-      :class="classNamesHeader"
-    >
-      <slot name="header" />
-    </h4>
     <div
       v-if="hasSlot('body')"
       class="card-body"
     >
       <slot name="body" />
     </div>
+     <h4
+      v-if="hasSlot('header')"
+      :class="classNamesHeader"
+    >
+      <slot name="header" />
+    </h4>
     <div
       v-if="hasSlot('footer')"
       class="card-footer"

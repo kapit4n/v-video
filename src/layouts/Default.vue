@@ -1,6 +1,7 @@
 <template>
   <div  :style="{width: '100%'}">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        :style="{borderBottom: '1px solid white'}">
       <button
         class="navbar-toggler"
         type="button"
@@ -19,10 +20,14 @@
           <button><i class="fa fa-microphone"></i></button>
       </div>
       <div :style="{display: 'flex'}">
-        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-plus"></i></button>
-        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-list"></i></button>
-        <button :style="{margin: '0 0.5rem'}"><i class="fa fa-flag"></i></button>
-        <button :style="{margin: '0 0 0 0.5rem'}"><i class="fa fa-user"></i></button>
+        <button class="btn btn-link" :style="{margin: '0 0.5rem'}">
+          <i class="fa fa-plus icon-color"></i></button>
+        <button class="btn btn-link" :style="{margin: '0 0.5rem'}">
+          <i class="fa fa-list icon-color"></i></button>
+        <button class="btn btn-link" :style="{margin: '0 0.5rem'}">
+          <i class="fa fa-flag icon-color"></i></button>
+        <button class="btn btn-link" :style="{margin: '0 0 0 0.5rem'}">
+          <i class="fa fa-user icon-color"></i></button>
       </div>
       <div
         :class="{ show : menuCollapsed}"
