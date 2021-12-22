@@ -4,29 +4,9 @@
       <div class="left-container">
         <div class="header-menu-left-nav">
           <ul class="navbar-nav mr-auto">
-            <router-link
-              :to="{ name: 'home.index' }"
-              active-class="active"
-              class="nav-item"
-              tag="li"
-            >
-              <a class="nav-link">Home </a>
-            </router-link>
-            <router-link
-              :to="{ name: 'explore.index' }"
-              active-class="active"
-              class="nav-item"
-              tag="li"
-            >
-              <a class="nav-link">Explore </a>
-            </router-link>
-            <router-link
-              :to="{ name: 'subscriptions.index' }"
-              active-class="active"
-              class="nav-item"
-              tag="li"
-            >
-              <a class="nav-link">Subscriptions </a>
+            <router-link v-for="l in links" :to="{ name: `${l.link}.index` }"
+                active-class="active" class="nav-item" tag="li" :key="l.link">
+                <a class="nav-link">{{ l.title }}</a>
             </router-link>
           </ul>
           <span class="navbar-text">
@@ -84,6 +64,15 @@ export default {
         { url: '/video/video-vue.mp4', title: 'Vue', details: 'Luis Arce' },
         { url: '/video/video-invencible.mp4', title: 'INVENCIBLE', details: 'Luis Arce' },
       ],
+      links: [
+        { link: 'home', title: 'Home' },
+        { link: 'account', title: 'Account' },
+        { link: 'explore', title: 'Explore' },
+        { link: 'subscriptions', title: 'Subscriptions' },
+        { link: 'library', title: 'Library' },
+        { link: 'history', title: 'History' },
+      ],
+      current: 'home',
     };
   },
 };

@@ -15,8 +15,8 @@
  */
 
 $grey-1 = #343a40;
-$header-background = #3e403f;
-$left-side-backrground = #3e403f;
+$header-background = #292727;
+$left-side-backrground = #292727;
 
 body {
   // color: white;
@@ -43,9 +43,6 @@ body {
   }
   .header-menu-left-nav a {
     color: white; 
-  }
-  .navbar-dark .navbar-nav .active > .nav-link {
-    color: white;
   }
   .navbar-nav :hover {
     background: #303333;
@@ -88,19 +85,18 @@ body {
   width: 100%;
 }
 
+.navbar-nav {
+  padding-left: 0;
+  margin-bottom: 0;
+}
 
-  .navbar-nav {
-    padding-left: 0;
-    margin-bottom: 0;
-  }
+.navbar-nav li {
+  padding-left: 1rem;
+}
 
-  .navbar-nav li {
-    padding-left: 1rem;
-  }
-
-  .navbar-nav span {
-    padding: 1rem;
-  }
+.navbar-nav span {
+  padding: 1rem;
+}
 
 @media (min-width: 992px) {
   .left-container {
